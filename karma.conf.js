@@ -40,6 +40,7 @@ module.exports = function(config) {
                 }),
             ],
             output: {
+                dir: 'build',
                 name: 'test',
                 format: 'iife',
                 sourcemap: 'inline',
