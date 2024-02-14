@@ -1,0 +1,35 @@
+{
+  "name": "@dhl-uu/timing-util",
+  "version": "0.0.0",
+  "description": "Async timing utilities for JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CentreForDigitalHumanities/js-timing-util.git"
+  },
+  "keywords": [
+    "animation",
+    "debounce",
+    "event loop",
+    "fastTimeout",
+    "frame",
+    "idle",
+    "microtask",
+    "postMessage",
+    "queueMicrotask",
+    "requestAnimationFrame",
+    "requestIdleCallback",
+    "setTimeout",
+    "throttle",
+    "timeout"
+  ],
+  "author": "UU Centre for Digital Humanities - Research Software Lab",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/CentreForDigitalHumanities/js-timing-util/issues"
+  },
+  "homepage": "https://github.com/CentreForDigitalHumanities/js-timing-util#readme"
+}
