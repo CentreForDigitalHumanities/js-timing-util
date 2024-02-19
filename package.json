@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Async timing utilities for JavaScript",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "karma start"
