@@ -4,6 +4,7 @@
   "description": "Async timing utilities for JavaScript",
   "main": "index.js",
   "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs",
     "test": "karma start"
   },
   "repository": {
