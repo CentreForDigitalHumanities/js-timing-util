@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { after, now } from 'underscore';
+import _ from 'underscore';
 import fastTimeout from './fastTimeout.js';
 
 describe('fastTimeout', function() {
@@ -22,7 +22,7 @@ describe('fastTimeout', function() {
             var remaining = 10;
             function countDown() {
                 if (--remaining) return method(countDown);
-                countDown.endTime = now();
+                countDown.endTime = _.now();
                 finish();
             }
             return countDown;
@@ -30,7 +30,7 @@ describe('fastTimeout', function() {
 
         fast = downcounter(fastTimeout);
         normal = downcounter(setTimeout);
-        finish = after(2, function() {
+        finish = _.after(2, function() {
             assert(fast.endTime < normal.endTime);
             done();
         });
