@@ -7,6 +7,14 @@ describe('fastTimeout', function() {
         fastTimeout(done);
     });
 
+    it('can pass arguments', function(done) {
+        function testMe(a, b, c) {
+            assert(a === 1 && b === 'xyz' && c === null);
+            done()
+        }
+        fastTimeout(testMe, 1, 'xyz', null);
+    });
+
     it('is faster than setTimeout', function(done) {
         var fast, normal, finish;
 
