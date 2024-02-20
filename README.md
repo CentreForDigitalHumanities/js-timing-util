@@ -21,29 +21,20 @@ npm add @dhl-uu/timing-util
 ```
 
 ``` javascript
-import { optIn, fastTimeout } from '@dhl-uu/timing-util/fastTimeout.js';
+import fastTimeout from '@dhl-uu/timing-util/fastTimeout.js';
 
-// Run once near the top of the entry point of your application
-optIn();
-
-// Run as often as you like, to defer something to a later cycle
-// of the event loop.
 fastTimeout(someFunction, ...args);
 ```
 
 ## Compatibility
 
-`fastTimeout` relies on the `postMessage` function, which is only present in reasonably modern browsers. For Node.js, use `process.nextTick` instead.
+While `fastTimeout` is based on `postMessage`, it automatically falls back to `setImmediate` in environments where that function is defined. Hence, you can transparently use it in Node.js as well.
 
 ## Reference
 
 ### Module `fastTimeout.js`
 
-#### Function `optIn`
-
-This function takes no arguments and returns `undefined`. It enables the administration that is required in order to make `fastTimeout` work. Calling `optIn()` is idempotent; in other words, you need to do it only once, but there is no harm in calling it multiple times.
-
-#### Function `fastTimeout`
+#### Function `fastTimeout` (default export)
 
 `fastTimeout(callback, ...args)` will schedule the function `callback` for a later cycle of the event loop. If you pass any `args`, these are passed to `callback` when it runs, in effect deferring the call `callback(...args)`. This is almost equivalent to `setTimeout(callback, 0, ...args)`, except that calls to `setTimeout` are throttled by the browser while calls to `fastTimeout` are not. In general, this saves several milliseconds per repetition.
 
