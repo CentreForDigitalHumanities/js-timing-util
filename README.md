@@ -16,14 +16,29 @@ The functions in this package offer new ways to postpone the execution of a call
 
 ## Quickstart
 
+If you have a workflow in which you install dependencies from [npm](https://npmjs.com/) and possibly bundle them with some kind of tool:
+
 ``` bash
+// could also use yarn, pnpm, etcetera
 npm add @dhl-uu/timing-util
 ```
 
 ``` javascript
+// could also use CommonJS or AMD syntax if necessary
 import fastTimeout from '@dhl-uu/timing-util/fastTimeout.js';
 
 fastTimeout(someFunction, ...args);
+```
+
+Alternatively, if you are directly using the library as a browser embed:
+
+``` html
+<script
+    src="https://cdn.jsdelivr.net/npm/@dhl-uu/timing-util@0.1.0/umd/fastTimeout.js"
+></script>
+<script>
+    TimingUtil.fastTimeout(someFunction, ...args);
+</script>
 ```
 
 ## Compatibility
