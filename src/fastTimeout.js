@@ -16,8 +16,15 @@ function handleMessage(event) {
     }
 }
 
-export function optIn() {
-    if (timeouts in self) return;
+// Like setTimeout, but takes no time argument (always zero) and is faster in
+// real browsers. setTimeout is throttled to 2-10 ms intervals.
+function fastTimeout(fn, ...args) {
+    self[timeouts].push({ fn, args });
+    self.postMessage(messageName, '*');
+}
+
+function enable() {
+    if (timeouts in self) return fastTimeout;
     Object.defineProperty(self, timeouts, {
         value: [],
         configurable: false,
@@ -25,11 +32,9 @@ export function optIn() {
         writable: false,
     });
     self.addEventListener('message', handleMessage, true);
+    return fastTimeout;
 }
 
-// Like setTimeout, but takes no time argument (always zero) and is faster in
-// real browsers. setTimeout is throttled to 2-10 ms intervals.
-export function fastTimeout(fn, ...args) {
-    self[timeouts].push({ fn, args });
-    self.postMessage(messageName, '*');
-}
+var hasSetImmediate = (typeof setImmediate === 'function');
+
+export default hasSetImmediate ? setImmediate : enable();

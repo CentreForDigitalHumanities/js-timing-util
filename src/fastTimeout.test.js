@@ -1,10 +1,8 @@
 import assert from 'assert';
 import { after, now } from 'underscore';
-import { optIn, fastTimeout } from './fastTimeout.js';
+import fastTimeout from './fastTimeout.js';
 
 describe('fastTimeout', function() {
-    before(optIn);
-
     it('can schedule a task', function(done) {
         fastTimeout(done);
     });
