@@ -2,6 +2,12 @@
   "name": "@dhl-uu/timing-util",
   "version": "0.1.0",
   "description": "Async timing utilities for JavaScript",
+  "author": "UU Centre for Digital Humanities - Research Software Lab",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/CentreForDigitalHumanities/js-timing-util/issues"
+  },
+  "homepage": "https://github.com/CentreForDigitalHumanities/js-timing-util#readme",
   "main": "index.js",
   "type": "commonjs",
   "files": [
@@ -39,12 +45,9 @@
     "throttle",
     "timeout"
   ],
-  "author": "UU Centre for Digital Humanities - Research Software Lab",
-  "license": "BSD-3-Clause",
-  "bugs": {
-    "url": "https://github.com/CentreForDigitalHumanities/js-timing-util/issues"
+  "dependencies": {
+    "underscore": "^1.13.6"
   },
-  "homepage": "https://github.com/CentreForDigitalHumanities/js-timing-util#readme",
   "devDependencies": {
     "@babel/core": "^7.23.9",
     "@rollup/plugin-babel": "^6.0.4",
@@ -61,8 +64,5 @@
     "rollup": "^4.10.0",
     "rollup-plugin-node-polyfills": "^0.2.1",
     "sinon": "^17.0.1"
-  },
-  "dependencies": {
-    "underscore": "^1.13.6"
   }
 }
