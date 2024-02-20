@@ -60,7 +60,9 @@
     "power-assert": "^1.6.1",
     "rollup": "^4.10.0",
     "rollup-plugin-node-polyfills": "^0.2.1",
-    "sinon": "^17.0.1",
+    "sinon": "^17.0.1"
+  },
+  "dependencies": {
     "underscore": "^1.13.6"
   }
 }
