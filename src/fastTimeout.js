@@ -1,4 +1,4 @@
-import { restArguments } from 'underscore';
+import _ from 'underscore';
 
 // The code in this module was inspired on the following blog post:
 // https://dbaron.org/log/20100309-faster-timeouts
@@ -6,6 +6,9 @@ import { restArguments } from 'underscore';
 
 var timeouts = '_fastTimeoutRegistry';
 var messageName = 'fast-timeout-message';
+
+// Work around one of JDD's breaking changes in Lodash.
+var restArguments = _.restArguments || _.rest;
 
 function handleMessage(event) {
     if (event.source === self && event.data === messageName) {
