@@ -1,4 +1,4 @@
-# Contributing to @dhl-uu/timing-util
+# Contributing to @uu-cdh/timing-util
 
 ## Required software
 

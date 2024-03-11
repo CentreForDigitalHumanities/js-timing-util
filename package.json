@@ -1,5 +1,5 @@
 {
-  "name": "@dhl-uu/timing-util",
+  "name": "@uu-cdh/timing-util",
   "version": "0.1.0",
   "description": "Async timing utilities for JavaScript",
   "author": "UU Centre for Digital Humanities - Research Software Lab",

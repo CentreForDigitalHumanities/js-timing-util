@@ -1,4 +1,4 @@
-# @dhl-uu/timing-util
+# @uu-cdh/timing-util
 
 Timing utilities for JavaScript.
 
@@ -20,12 +20,12 @@ If you have a workflow in which you install dependencies from [npm](https://npmj
 
 ``` bash
 // could also use yarn, pnpm, etcetera
-npm add @dhl-uu/timing-util
+npm add @uu-cdh/timing-util
 ```
 
 ``` javascript
 // could also use CommonJS or AMD syntax if necessary
-import fastTimeout from '@dhl-uu/timing-util/fastTimeout.js';
+import fastTimeout from '@uu-cdh/timing-util/fastTimeout.js';
 
 fastTimeout(someFunction, ...args);
 ```
@@ -34,7 +34,7 @@ Alternatively, if you are directly using the library as a browser embed:
 
 ``` html
 <script
-    src="https://cdn.jsdelivr.net/npm/@dhl-uu/timing-util@0.1.0/umd/fastTimeout.js"
+    src="https://cdn.jsdelivr.net/npm/@uu-cdh/timing-util@0.1.0/umd/fastTimeout.js"
 ></script>
 <script>
     TimingUtil.fastTimeout(someFunction, ...args);
