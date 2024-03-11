@@ -2,8 +2,7 @@ import { restArguments } from 'underscore';
 
 // The code in this module was inspired on the following blog post:
 // https://dbaron.org/log/20100309-faster-timeouts
-// In this module, we use a different name, enable passing arguments and use ES6
-// syntax.
+// In this module, we use a different name and enable passing arguments.
 
 var timeouts = '_fastTimeoutRegistry';
 var messageName = 'fast-timeout-message';
