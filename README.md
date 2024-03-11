@@ -1,4 +1,4 @@
-# @dhl-uu/timing-util
+# @uu-cdh/timing-util
 
 Timing utilities for JavaScript.
 
@@ -16,14 +16,29 @@ The functions in this package offer new ways to postpone the execution of a call
 
 ## Quickstart
 
+If you have a workflow in which you install dependencies from [npm](https://npmjs.com/) and possibly bundle them with some kind of tool:
+
 ``` bash
-npm add @dhl-uu/timing-util
+// could also use yarn, pnpm, etcetera
+npm add @uu-cdh/timing-util
 ```
 
 ``` javascript
-import fastTimeout from '@dhl-uu/timing-util/fastTimeout.js';
+// could also use CommonJS or AMD syntax if necessary
+import fastTimeout from '@uu-cdh/timing-util/fastTimeout.js';
 
 fastTimeout(someFunction, ...args);
+```
+
+Alternatively, if you are directly using the library as a browser embed:
+
+``` html
+<script
+    src="https://cdn.jsdelivr.net/npm/@uu-cdh/timing-util@0.1.0/umd/fastTimeout.js"
+></script>
+<script>
+    fastTimeout(someFunction, ...args);
+</script>
 ```
 
 ## Compatibility

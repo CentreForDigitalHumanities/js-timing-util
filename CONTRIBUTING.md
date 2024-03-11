@@ -1,13 +1,10 @@
-# Contributing to @dhl-uu/timing-util
+# Contributing to @uu-cdh/timing-util
 
 ## Required software
 
-- Node.js
-- npm
-- git
-- [editorconfig plugin][editorconfig] for your favorite editor
-
-[editorconfig]: https://editorconfig.org/
+- [Node.js](https://nodejs.org/)
+- [npm](https://npmjs.com/)
+- [git](https://git-scm.com/)
 
 ## First time after cloning the repository
 
@@ -17,9 +14,18 @@ npm install
 
 ## Code organization
 
-All source code is in ESM format in the `src/` directory. A UMD version of each module is created in the `umd/` directory when we run `npm publish` or manually when we `npm run build`.
+All source code is in [ES module format][esm] in the `src/` directory. A [UMD][umd] version of each module is created in the `umd/` directory when we run `npm publish` or manually when we `npm run build`.
 
-Please be mindful of users who need backwards compatibility. Transpiled code can be bulky and polyfills tend to be huge. Don't go wild with ESNext features if you don't really need them.
+Please be mindful of users who need backwards compatibility. Do not use new language features such as spread syntax or `async`/`await` unless you really need to. Transpiled code can be bulky and polyfills tend to be huge.
+
+[esm]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+[umd]: https://www.davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/
+
+## Whitespace formatting
+
+Please see the [.editorconfig](.editorconfig) on how to format whitespace. Installing the appropriate [editorconfig plugin][editorconfig] for your favorite editor is the easiest way to ensure that you respect the conventions.
+
+[editorconfig]: https://editorconfig.org/
 
 ## Running tests
 

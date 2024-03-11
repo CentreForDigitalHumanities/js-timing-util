@@ -1,8 +1,12 @@
 export default {
     input: 'src/fastTimeout.js',
+    external: ['underscore'],
     output: {
         dir: 'umd',
         format: 'umd',
-        name: 'TimingUtil',
-    }
+        name: 'fastTimeout',
+        globals: {
+            underscore: '_',
+        },
+    },
 };
