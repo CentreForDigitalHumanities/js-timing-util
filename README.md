@@ -37,7 +37,7 @@ Alternatively, if you are directly using the library as a browser embed:
     src="https://cdn.jsdelivr.net/npm/@uu-cdh/timing-util@0.1.0/umd/fastTimeout.js"
 ></script>
 <script>
-    TimingUtil.fastTimeout(someFunction, ...args);
+    fastTimeout(someFunction, ...args);
 </script>
 ```
 

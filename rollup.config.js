@@ -4,7 +4,7 @@ export default {
     output: {
         dir: 'umd',
         format: 'umd',
-        name: 'TimingUtil',
+        name: 'fastTimeout',
         globals: {
             underscore: '_',
         },
