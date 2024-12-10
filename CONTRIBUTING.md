@@ -14,7 +14,7 @@ npm install
 
 ## Code organization
 
-All source code is in [ES module format][esm] in the `src/` directory. A [UMD][umd] version of each module is created in the `umd/` directory when we run `npm publish` or manually when we `npm run build`.
+All source code is in [ES module format][esm] in the `src/` directory.
 
 Please be mindful of users who need backwards compatibility. Do not use new language features such as spread syntax or `async`/`await` unless you really need to. Transpiled code can be bulky and polyfills tend to be huge.
 
