@@ -35,7 +35,7 @@ You can also use the library directly from a browser embed, but you may need to 
 
 ## Compatibility
 
-While `fastTimeout` is based on `postMessage`, it automatically falls back to `setImmediate` in environments where that function is defined. Hence, you can transparently use it in Node.js as well.
+While `fastTimeout` is based on `postMessage`, it automatically falls back to `setImmediate` in environments where that function is defined. Hence, you can transparently use it in Node.js as well. In environments where neither `postMessage` nor `setImmediate` is defined, it falls back to plain `setTimeout`; you get a performance degradation in that case, but at least your code will still work.
 
 ## Reference
 
