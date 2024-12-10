@@ -24,22 +24,14 @@ npm add @uu-cdh/timing-util
 ```
 
 ``` javascript
-// could also use CommonJS or AMD syntax if necessary
-import fastTimeout from '@uu-cdh/timing-util/fastTimeout.js';
+import fastTimeout from '@uu-cdh/timing-util/src/fastTimeout.js';
 
 fastTimeout(someFunction, ...args);
 ```
 
-Alternatively, if you are directly using the library as a browser embed:
+You can also use the library directly from a browser embed, but you may need to set up [import maps][import-map] in that case.
 
-``` html
-<script
-    src="https://cdn.jsdelivr.net/npm/@uu-cdh/timing-util@0.1.0/umd/fastTimeout.js"
-></script>
-<script>
-    fastTimeout(someFunction, ...args);
-</script>
-```
+[import-map]: https://developer.mozilla.org/docs/Web/HTML/Element/script/type/importmap
 
 ## Compatibility
 

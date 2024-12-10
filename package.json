@@ -9,20 +9,11 @@
   },
   "homepage": "https://github.com/CentreForDigitalHumanities/js-timing-util#readme",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "files": [
-    "src/*",
-    "umd/*"
+    "src/*"
   ],
-  "exports": {
-    "./*.js": {
-      "import": "./src/*.js",
-      "default": "./umd/*.js"
-    }
-  },
   "scripts": {
-    "build": "rollup -c --bundleConfigAsCjs",
-    "prepublishOnly": "npm run build",
     "test": "karma start"
   },
   "repository": {
