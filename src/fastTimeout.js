@@ -40,5 +40,6 @@ function enable() {
 }
 
 var hasSetImmediate = (typeof setImmediate === 'function');
+var hasPostMessage = (typeof self.postMessage === 'function');
 
-export default hasSetImmediate ? setImmediate : enable();
+export default hasPostMessage ? enable() : hasSetImmediate ? setImmediate : _.defer;
